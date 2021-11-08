@@ -11,3 +11,6 @@
     margin: 0;
     font-family: Poppins, serif;
 }
+.h-inherit{
+    height: inherit;
+}
