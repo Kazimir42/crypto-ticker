@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CryptoItem = (props) => {
     return (
@@ -11,9 +12,15 @@ const CryptoItem = (props) => {
                 <p>${props.crypto.current_price}</p>
             </td>
             <td className="p-5 text-right">
-                <a href="http://localhost:3000/" className="bg-primary text-white rounded-md p-2 hover:bg-dark-primary">
+                <Link
+                    to={{
+                        pathname: `/${props.crypto.id}`,
+                        state: props.crypto
+                    }}
+                    className="bg-primary text-white rounded-md p-2 hover:bg-dark-primary">
                     <button>where buy ?</button>
-                </a>
+                </Link>
+
             </td>
         </tr>
 
