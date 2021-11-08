@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Header from "../components/Header";
 import axios from "axios";
 import CryptoTicker from "../components/CryptoTicker";
+import Footer from "../components/Footer";
 
 const Crypto = () => {
     const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ const Crypto = () => {
     return (
         <div className="home">
             <Header />
-            <section className="container mx-auto">
+            <section className="container mx-auto mb-20">
                 <div>
                     {data
                         .map((market) => (
@@ -31,6 +32,7 @@ const Crypto = () => {
                     }
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };

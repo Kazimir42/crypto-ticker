@@ -28,6 +28,8 @@ const Cryptos = () => {
                     <tr className='border-b border-gray-300 text-left'>
                         <th className='p-5'>Name</th>
                         <th className='p-5'>Price</th>
+                        <th className='p-5'>24h %</th>
+                        <th className='p-5'>Market Cap</th>
                     </tr>
                 </thead>
                 <tbody className="">
