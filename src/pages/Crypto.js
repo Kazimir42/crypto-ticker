@@ -23,7 +23,7 @@ const Crypto = () => {
     return (
         <div className="home">
             <Header />
-            <section className="container mx-auto mb-20">
+            <section className="container mx-auto mb-20 min-h-screen">
                 <div>
                     {data
                         .map((market) => (
