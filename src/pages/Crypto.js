@@ -13,7 +13,7 @@ const Crypto = () => {
         setIdCoin(id)
 
         axios
-            .get('https://api.coingecko.com/api/v3/coins/'+ id +'/tickers')
+            .get('https://api.coingecko.com/api/v3/coins/'+ id +'/tickers?include_exchange_logo=true')
             .then((result) => {
                 setData(result.data.tickers);
             });
@@ -30,6 +30,7 @@ const Crypto = () => {
                             <th className='p-5'>Name</th>
                             <th className='p-5'>Pairs</th>
                             <th className='p-5'>Price</th>
+                            <th className='p-5'>Trust</th>
                         </tr>
                         </thead>
                         <tbody className="">
