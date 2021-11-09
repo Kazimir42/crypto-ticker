@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import axios from "axios";
 import Footer from "../components/Footer";
 import CryptoMarket from "../components/CryptoMarket";
-import CryptoItem from "../components/CryptoItem";
 
 const Crypto = () => {
     const [data, setData] = useState([]);

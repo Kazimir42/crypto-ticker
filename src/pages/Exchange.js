@@ -21,20 +21,36 @@ const Exchange = () => {
 
 
     return (
+
+
         <div className="">
             <Header />
             <section className="container mx-auto mb-20 min-h-screen">
                 <div>
-                    {data
-                        .filter((coin) => coin.target === 'USD')
-                        .map((coin) => (
-                            <ExchangeCoin coin={coin} key={coin.base + '/' + coin.target} />
-                        ))
-                    }
+                    <table className="exchanges-list w-full bg-gray-100 rounded-md shadow">
+                        <thead>
+                        <tr className='border-b border-gray-300 text-left'>
+                            <th className='p-5'>Name</th>
+                            <th className='p-5'>Pairs</th>
+                            <th className='p-5'>Price</th>
+                            <th className='p-5'>Trust</th>
+                        </tr>
+                        </thead>
+                        <tbody className="">
+                        {data
+                            .filter((coin) => coin.target === 'USD')
+                            .map((coin) => (
+                                <ExchangeCoin coin={coin} key={coin.base + '/' + coin.target} />
+                            ))
+                        }
+                        </tbody>
+                    </table>
+
                 </div>
             </section>
             <Footer />
         </div>
+
     );
 };
 
