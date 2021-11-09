@@ -6,11 +6,9 @@ import ExchangeCoin from "../components/ExchangeCoin";
 
 const Exchange = () => {
     const [data, setData] = useState([]);
-    const [idExchange, setIdExchange] = useState('');
 
     useEffect(() => {
         let id = window.location.pathname.split('/').pop();
-        setIdExchange(id)
 
         axios
             .get('https://api.coingecko.com/api/v3/exchanges/'+id+'/tickers')

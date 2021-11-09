@@ -6,13 +6,11 @@ import CryptoMarket from "../components/CryptoMarket";
 
 const Crypto = () => {
     const [data, setData] = useState([]);
-    const [idCoin, setIdCoin] = useState('');
     const [selectedRadio, setSelectedRadio] = useState("USD");
     const radios = ["USD", "EUR"];
 
     useEffect(() => {
         let id = window.location.pathname.split('/').pop();
-        setIdCoin(id)
 
         axios
             .get('https://api.coingecko.com/api/v3/coins/' + id + '/tickers?include_exchange_logo=true')
