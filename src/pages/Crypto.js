@@ -21,7 +21,7 @@ const Crypto = () => {
     }, []);
 
     return (
-        <div className="home">
+        <div className="">
             <Header />
             <section className="container mx-auto mb-20 min-h-screen">
                 <div>
