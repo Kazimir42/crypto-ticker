@@ -26,7 +26,7 @@ const ExchangeCoin = (props) => {
             <td className="p-5 text-right">
 
                 <a
-                    href={props.coin.trade_url} target='_blank'
+                    href={props.coin.trade_url} target='_blank' rel="noopener"
                     className="bg-primary text-white rounded-md p-2 hover:bg-dark-primary">
                     trade now
                 </a>
